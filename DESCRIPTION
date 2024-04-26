@@ -1,0 +1,12 @@
+Package: indexical
+Type: Package
+Title: Species Diversity Indices
+Version: 0.1.1
+Author: Ryan Hernandez, Jamie Wiener, & Claire Brandes
+Maintainer: Jamie Wiener <jamie.wiener@utexas.edu>
+Description: This package allows you to quantify species representation in your census dataset and explore your census data with several diversity indices and evenness measures.
+Depends: R (>= 3.5)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.1
