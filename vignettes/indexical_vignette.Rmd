@@ -9,23 +9,69 @@ vignette: >
 
 ## Species Diversity
 
+**Species diversity** is a combined measure of **species richness** and **species evenness**.
+
 ### Species Richness
 
+**Species richness** (S) refers to the number of different species found in an ecological community.
+
 ### Species Evenness
+
+**Species evenness** is a measure of the relative abundances of the different species found in an ecological community.
 
 ## Species Diversity Indices
 
 ### Simpson’s Index
 
+<span style="color: blue;">D = 1 - $\sum_{i-1}^{S}$ $p_{i}^{2}$</span>
+
+where **S** is **species richness** (the total number of species in the data set) and $p_{i}$ is the proportion of individuals belonging to the *i*th species in the sample.
+
+The **Simpson's Index** represents the probability that two randomly chosen individuals belong to different species, with values on a scale from 0 to 1. This index assumes that the probability of selecting an individual out of a population is proportional to the abundance of that individual’s species, as well as that the species pool is closed (i.e. new species cannot enter the community). It is most concerned with questions of relative abundances (i.e. the number of individuals of each species) and gives more weight to common/highly abundant species. 
+
+The **Simpson's Index** is best applied in cases where:
+
+* Species dominance is particularly important, such as when:
+  + Your study community contains a dominant species that plays a significant role
+  + You are interested in changes in which species is dominant in your study community
+
 #### Simpson's Evenness
+
+<span style="color: blue;">$E_{D}$ = $\frac{1}{DS}$</span>
+
+where **D** is the value of the **Simpson’s Diversity Index** and **S** is **species richness**. Values are on a scale from 0 to 1.
+
+**Simpson's Evenness** is concerned with the distribution of individuals among species but also considers the dominance of the most abundant species. 
 
 ### Shannon-Weiner Index
 
-#### $H_{max}$
+<span style="color: blue;">$H'$ = $\sum_{i-1}^{S}$ $p_{i}$ ln$p_{i}$</span>
+
+where **S** is **species richness** and **$p_{i}$** is the proportion of individuals belonging to the *i*th species in the sample.
+
+The **Shannon-Weiner Index** measures the certainty with which we can correctly predict what species a randomly selected individual will belong to in a community, with values on a scale from 0 to $H_{max}$ (the log of species richness). As species richness and evenness increases, so does the index value. This index assumes that the sample is random and that all species in the community are represented in the sample. It is most concerned with questions of species richness (i.e. the number of species in a community).
+
+The **Shannon-Weiner Index** is best applied in cases where:
+
+* A balanced measure of species diversity is particularly important, such as when:
+  + Your study community contains a rare species that plays a significant role 
+  + You are interested in both species richness and evenness
 
 #### Shannon's Evenness
 
+<span style="color: blue;">$E_{H'}$ = $\frac{H'}{logS}$</span>
+
+where **$H'$** is the **Shannon Diversity Index** and **S** is the species richness. Values are on a scale from 0 to 1. As a reminder, **logS** is **$H_{max}$**.  
+
+**Shannon's Evenness** is concerned with the distribution of individuals among species. Unlike **Simpson's Evenness**, in the case of **Shannon's Evenness**, evenness is independent of dominance.
+
 ### Berger-Parker Dominance
+
+<span style="color: blue;">BPD = $\frac{N_{max}}{n}$</span>
+
+where **$N_{max}$** is the number of individuals in the most abundant species and **n** is the number of individuals in the sample. 
+
+**Berger-Park Dominance** is the simplest diversity index, providing a very preliminary idea of the community structure. This index considers only the most abundant species. Additionally, it assumes that the probability of selecting an individual out of a population is proportional to the abundance of that individual’s species.
 
 ## {Indexical}
 
@@ -43,13 +89,19 @@ ggplot2::ggplot()
 library(indexical)
 ```
 
+### Example Dataset
+
+The `seaturtles` dataset is included within {indexical} as a helpful example. This is a publicly available dataset from the **Southeast Fisheries Science Center** census data from sea turtles in North Carolina. Each observation includes the year the sea turtle capture occurred and its species identification. 
+
+More information available at [Southeast Fisheries Science Center](https://www.fisheries.noaa.gov/inport/item/35875#attr_4).
+
 ### Functions
 
 #### census()
 
 **census()** tallies observations of each species in your dataset. The **col_name** argument takes the column from your original dataset containing the species name.
 
-census <- function(col_name)
+<span style="color: blue;">census <- function(col_name)</span>
 
 ```{r}
 c <- census(seaturtles$Species)
@@ -60,7 +112,7 @@ print(c)
 
 **div_index()** calculates several diversity indices (Species Richness, Simpson's Index, Shannon's Index, Berger-Parker Index) and evenness measures (Simpson's Evenness, Shannon's Evenness) from the output dataframe of the **census()** function. The **species_col** argument takes the column containing species names and the **pop_col** takes the column containing population count from the **census()** output dataframe.
 
-div_index <- function(species_col, pop_col)
+<span style="color: blue;">div_index <- function(species_col, pop_col)</span>
 
 ```{r}
 div_ind <- div_index(c$species_names, c$individuals)

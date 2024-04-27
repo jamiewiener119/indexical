@@ -12,7 +12,7 @@ div_index(species_col, pop_col)
 \item{pop_col}{individuals column from census() function output}
 }
 \description{
-This function allows you explore your census data with several diversity indices (Species Richness, Simpson's Index, Shannon's Index, Berger-Parker Index) and evenness measures (Simpson's Evenness, Shannon's Evenness)
+This function allows you explore your census data with several diversity indices (Species Richness, Simpson's Index, Shannon's Index, Berger-Parker Index) and evenness measures (Simpson's Evenness, Shannon's Evenness).
 }
 \examples{
 div_index <- function(species_col, pop_col)
