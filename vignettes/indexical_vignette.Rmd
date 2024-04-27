@@ -71,7 +71,7 @@ where **$H'$** is the **Shannon Diversity Index** and **S** is the species richn
 
 where **$N_{max}$** is the number of individuals in the most abundant species and **n** is the number of individuals in the sample. 
 
-**Berger-Park Dominance** is the simplest diversity index, providing a very preliminary idea of the community structure. This index considers only the most abundant species. Additionally, it assumes that the probability of selecting an individual out of a population is proportional to the abundance of that individual’s species.
+**Berger-Parker Dominance** is the simplest diversity index, providing a very preliminary idea of the community structure. This index considers only the most abundant species. Additionally, it assumes that the probability of selecting an individual out of a population is proportional to the abundance of that individual’s species.
 
 ## {Indexical}
 
