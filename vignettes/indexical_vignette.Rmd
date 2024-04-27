@@ -52,7 +52,8 @@ library(indexical)
 census <- function(col_name)
 
 ```{r}
-
+c <- census(seaturtles$Species)
+print(c)
 ```
 
 #### div_index() 
@@ -62,6 +63,7 @@ census <- function(col_name)
 div_index <- function(species_col, pop_col)
 
 ```{r}
-
+div_ind <- div_index(c$species_names, c$individuals)
+print(div_ind)
 ```
 

@@ -14,5 +14,6 @@ This function allows you to quantify species representation in your dataset.
 }
 \examples{
 census <- function(col_name)
+c <- census(seaturtles$species)
 }
 \keyword{species}

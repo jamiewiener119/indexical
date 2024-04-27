@@ -1,13 +1,13 @@
 
 #' @title div_index
 #' @description This function allows you explore your census data with several diversity indices (Species Richness, Simpson's Index, Shannon's Index, Berger-Parker Index) and evenness measures (Simpson's Evenness, Shannon's Evenness)
-#' @param species_col species name column from census function output
-#' @param pop_col population count column from census function output
+#' @param species_col species_name column from census() function output
+#' @param pop_col individuals column from census() function output
 #' @keywords diversity
 #' @export
 #' @examples
 #' div_index <- function(species_col, pop_col)
-
+#' div_ind <- div_index(c$species_names, c$individuals)
 
 div_index <- function(species_col, pop_col){
 
@@ -18,26 +18,32 @@ div_index <- function(species_col, pop_col){
   shannon_ind <- vector()
   berger_ind <- vector()
 
-  num_spe <- length(c$species_names)
+  num_spe <- length(species_col)
   tot_pop <- sum(pop_col)
 
+  #Species Richness
   index_values[[1]] <- num_spe
 
+  #Simpsons
   for (i in 1:length(species_col)){
     simps_ind[[i]] <- (pop_col[[i]]/tot_pop)^2
     index_values[[2]] <- sum(simps_ind)
   }
 
+  #Simpson's evenness
   index_values[[3]] <- 1/(index_values[[2]]*num_spe)
 
+  #Shannon and Hmax
   for (i in 1:length(species_col)){
     shannon_ind[[i]] <- (pop_col[[i]]/tot_pop)*log(pop_col[[i]]/tot_pop)
     index_values[[4]] <- sum(shannon_ind)*-1
     index_values[[5]] <- log(num_spe)
   }
 
+  #Shannon's evenness
   index_values[[6]] <- (index_values[[4]]/index_values[[5]])
 
+  #Berger
   for (i in 1:length(species_col)){
     berger_ind[[i]] <- (pop_col[[i]]/tot_pop)
     index_values[[7]] <- max(berger_ind)

@@ -6,6 +6,7 @@
 #' @export
 #' @examples
 #' census <- function(col_name)
+#' c <- census(seaturtles$species)
 
 census <- function(col_name){
 
