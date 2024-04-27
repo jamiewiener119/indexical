@@ -7,26 +7,59 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-**Indexical** is a package designed to help format and analyze biological census data.
+## Species Diversity
+
+### Species Richness
+
+### Species Evenness
+
+## Species Diversity Indices
+
+### Simpson’s Index
+
+#### Simpson's Evenness
+
+### Shannon-Weiner Index
+
+#### $H_{max}$
+
+#### Shannon's Evenness
+
+### Berger-Parker Dominance
+
+## {Indexical}
+
+**{Indexical}** is a package designed to help format and analyze biological census data.
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+ggplot2::ggplot()
 ```
 
 ```{r setup}
 library(indexical)
 ```
 
-+++walk through census() with bundled data set
+### Functions
+
+#### census()
+
+**census()** tallies observations of each species in your dataset. The **col_name** argument takes the column from your original dataset containing the species name.
+
+census <- function(col_name)
 
 ```{r}
 
 ```
 
-+++walk through div_index() with bundled data set
+#### div_index() 
+
+**div_index()** calculates several diversity indices (Species Richness, Simpson's Index, Shannon's Index, Berger-Parker Index) and evenness measures (Simpson's Evenness, Shannon's Evenness) from the output dataframe of the **census()** function. The **species_col** argument takes the column containing species names and the **pop_col** takes the column containing population count from the **census()** output dataframe.
+
+div_index <- function(species_col, pop_col)
 
 ```{r}
 
