@@ -1,7 +1,7 @@
 Package: indexical
 Type: Package
 Title: Species Diversity Indices
-Version: 0.1.1
+Version: 0.1.2
 Author: Ryan Hernandez, Jamie Wiener, & Claire Brandes
 Maintainer: Jamie Wiener <jamie.wiener@utexas.edu>
 Description: This package allows you to quantify species representation in your census dataset and explore your census data with several diversity indices and evenness measures.
@@ -12,3 +12,7 @@ LazyData: true
 RoxygenNote: 7.3.1
 URL: https://github.com/jamiewiener119/indexical
 BugReports: https://github.com/jamiewiener119/indexical/issues
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
