@@ -4,8 +4,16 @@
 \name{indexical-package}
 \alias{indexical}
 \alias{indexical-package}
-\title{indexical: Soecies Diversity Indices}
+\title{indexical: Species Diversity Indices}
 \description{
 This package allows you to quantify species representation in your census dataset and explore your census data with several diversity indices and evenness measures.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/jamiewiener119/indexical}
+  \item Report bugs at \url{https://github.com/jamiewiener119/indexical/issues}
+}
+
 }
 \keyword{internal}
