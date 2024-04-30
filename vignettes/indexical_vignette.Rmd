@@ -119,3 +119,18 @@ div_ind <- div_index(c$species_names, c$individuals)
 print(div_ind)
 ```
 
+###### References
+
+Bobbitt, Z. (2021). *Shannon-Diversity Index: Definition & Example*. [Statology.](https://www.statology.org/shannon-diversity-index/)
+
+Heip, C.H.R, Herman, P.M.J., & Soetaert, K. (1998). Indices of diversity and evenness. *Oceanis*, *24*(4), 61-88.
+
+Morris, K.E., Caruso, T., Buscot, F., Fischer, M., Hancock, C., Majer, T.S., Meiners, T., Müller, C., Obermaier, E., Prati, D., Socher, S.A., Sonnemann, I., Wäscheke, N., Wubet, T., Wurst, S., & Rillig, M.C. (2014). Choosing and using diversity indices: insights for ecological applications from the German Biodiversity Exploratories. *Ecology and Evolution*, *4*(18), 3514-3524.
+
+Pielou, E.C. (1966). The measurement of diversity in different types of biological collections. *Journal of Theoretical Biology*, *13*, 131-144.
+
+Schleuter, D., Daufresne, M., Massol, F., & Argillier, C. (2010). A user's guide to functional diversity indices. *Ecological Monographs*, *80*(3), 469-484.
+
+Shannon, C.E. (1948). A mathematical theory of communication. *The Bell System Technical Journal*, *27*, 379-423.
+
+Simpson, E.H. (1949). Measurements of diversity. *Nature*, *163*, 688.
